@@ -12,8 +12,8 @@
 
 
 <div>
-	<span>회원정보</span>
-	<span>회원정보 등록</span>
+	<span><a href="repair_list">회원정보</a></span>
+	<span><a href="repair_insert">회원정보 등록</a></span>
 </div>
 
 
