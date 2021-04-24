@@ -38,10 +38,10 @@ public class HomeController {
 		return "home";
 	}
 	//메인페이지
-	@RequestMapping({"/","/repair_main"})
+	@RequestMapping({"/","/index"})
 	public String repair_main() {
 		System.out.println("메인");
-		return "repair_main";
+		return "index";
 	}
 	
 	//리스트페이지
