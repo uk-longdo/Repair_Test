@@ -4,5 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my">
 
+<insert id="insertdress">
+	insert into dress values(#{dress_name}, #{dress_age}, #{dress_weight}, #{dress_height}, #{dress_number}, #{dress_bottom}, #{dress_waist}, #{dress_top},#{dress_size},CURDATE());
+</insert>
 
+<select id="relist" resultType="com.my.uk.RepairDto">
+	select * from dress ORDER BY dress_day desc 
+</select>
 </mapper>

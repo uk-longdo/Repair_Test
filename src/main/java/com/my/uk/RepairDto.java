@@ -8,6 +8,7 @@ public class RepairDto {
 	private int dress_height;
 	private String dress_number;
 	private String dress_bottom;
+	private String dress_waist;
 	private String dress_top;
 	private String dress_size;
 	private String dress_day;
@@ -17,7 +18,7 @@ public class RepairDto {
 	public RepairDto(){}
 	
 	public RepairDto(String dress_name, int dress_age, int dress_weight, int dress_height, String dress_number,
-			String dress_bottom, String dress_top, String dress_size, String dress_day) {
+			String dress_bottom,String dress_waist, String dress_top, String dress_size, String dress_day) {
 		super();
 		this.dress_name = dress_name;
 		this.dress_age = dress_age;
@@ -25,11 +26,21 @@ public class RepairDto {
 		this.dress_height = dress_height;
 		this.dress_number = dress_number;
 		this.dress_bottom = dress_bottom;
+		this.dress_waist = dress_waist; 
 		this.dress_top = dress_top;
 		this.dress_size = dress_size;
 		this.dress_day = dress_day;
+		
 	}
 	
+	public String getDress_waist() {
+		return dress_waist;
+	}
+
+	public void setDress_waist(String dress_waist) {
+		this.dress_waist = dress_waist;
+	}
+
 	public String getDress_name() {
 		return dress_name;
 	}

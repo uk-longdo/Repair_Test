@@ -4,7 +4,9 @@ package com.my.uk;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 
@@ -24,7 +26,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
-	
+
+	@Autowired
+	RepairDao rdao;
 	
 	
 	
@@ -46,7 +50,10 @@ public class HomeController {
 	
 	//리스트페이지
 	@RequestMapping("repair_list")
-	public String repair_list() {
+	public String repair_list(Model model) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		model.addAttribute("list",rdao.relist(map));
 		
 		return "repair_list";
 	}
@@ -58,4 +65,23 @@ public class HomeController {
 		
 		return "repair_insert";
 	}
+	
+	@RequestMapping("insert")
+	public String insert(String dress_name, int dress_age, int dress_weight,int dress_height,String dress_number, String dress_bottom, String dress_waist, String dress_top, String dress_size, String dress_day) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("dress_name", dress_name);
+		map.put("dress_age", dress_age);
+		map.put("dress_weight", dress_weight);
+		map.put("dress_height", dress_height);
+		map.put("dress_number", dress_number);
+		map.put("dress_bottom", dress_bottom);
+		map.put("dress_waist", dress_waist);
+		map.put("dress_top", dress_top);
+		map.put("dress_size", dress_size);
+		map.put("dress_day", dress_day);
+
+		rdao.insertdress(map);
+		return "index";
+	}
+	
 }

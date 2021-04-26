@@ -35,6 +35,10 @@
 		<td><input type="text" name="dress_bottom"></td>
 	</tr>
 	<tr>
+		<td>허리</td>
+		<td><input type="text" name="dress_waist"></td>
+	</tr>
+	<tr>
 		<td>상의</td>
 		<td><input type="text" name="dress_top"></td>
 	</tr>
@@ -45,6 +49,12 @@
 	<tr>
 		<td><input type="submit" value="등록"></td>
 		<td><input type="reset" value="취소"></td>
+	</tr>
+	<tr>
+		<td colspan="1">
+			<input type="button" value="목록으로" onclick="location.href='index'"> 
+		</td>
+		
 	</tr>
 	
 </table>
